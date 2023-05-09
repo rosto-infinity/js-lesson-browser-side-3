@@ -6,7 +6,7 @@ let number = 29;
 // console.log(typeof (number));
 let boolean = true;
 let object_null = null;
-// console.log(typeof object);
+//  console.log(typeof (object_null));
 let maVriable; // type Undefined
 
 //--------------  Les tableaux
@@ -15,7 +15,7 @@ let maVriable; // type Undefined
 let array = ["Bafou", "Batié", "Baham", "Bafang"];
 // console.log(array[0][2]);
 
-//Tableau-1
+//Tableau-2
 let array2 = ["Bafou", 29, true, [5, 7], "Batié", "Baham", {
     nom: "rosto",
     age: 29
@@ -44,6 +44,7 @@ let data = [
         lastname: "dev1",
         age: 30,
         technos: ["Javascript", "NodeJs", "React", "laravel", "Flutter"],
+        adress : "MarchéB",
         admin: false
     },
     {
@@ -66,7 +67,7 @@ let data = [
 // Les Structures de controle
 //---------------------------
 if (data[0].age > data[1].age) {
-    // console.log(`${data[0].firstname} est plus agé que ${data[1].firstname}`);
+    console.log(`${data[0].firstname} est plus agé que ${data[1].firstname}`);
 } else {
     // console.log(`${data[1].firstname} est plus agé que ${data[0].firstname}`);
 }
@@ -96,7 +97,7 @@ document.body.addEventListener(
                 document.body.style.background = "blue";
                 break;
             default:
-                null;
+            document.body.style.background = "tomato";
         }
 
     });

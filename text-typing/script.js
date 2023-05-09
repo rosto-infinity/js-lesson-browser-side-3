@@ -1,9 +1,13 @@
+
+// Tout d'abord, le code définit un élément HTML spécifique en utilisant son ID (target) comme référence, et crée un tableau contenant les mots à afficher sur cet élément.
 const target = document.getElementById("target");
 let array = [
     "Développeur",
     "Graphiste",
     " Créatif"
 ];
+
+// les variables "wordIndex" et "letterIndex" sont initialisées à 0.
 let wordIndex = 0;
 let letterIndex = 0;
 //  

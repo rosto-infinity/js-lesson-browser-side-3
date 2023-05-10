@@ -67,7 +67,7 @@ let data = [
 // Les Structures de controle
 //---------------------------
 if (data[0].age > data[1].age) {
-    console.log(`${data[0].firstname} est plus agé que ${data[1].firstname}`);
+    // console.log(`${data[0].firstname} est plus agé que ${data[1].firstname}`);
 } else {
     // console.log(`${data[1].firstname} est plus agé que ${data[0].firstname}`);
 }
@@ -101,3 +101,15 @@ document.body.addEventListener(
         }
 
     });
+
+    // Methodes String
+    let string2 ="Javascript est un langage orienté objet";
+
+    // console.log(string2);
+    // console.log(typeof string2);
+    console.log(eval("1" + 2));
+    // console.log(parseInt("17"));
+    // console.log(typeof parseInt("17"));
+    // console.log();
+
+

@@ -21,6 +21,9 @@ const nombres01 = [1, 2, 3];
 const doubles = nombres01.map(x => x * 2);
 console.log(doubles); // affiche [2, 4, 6]
 
+//--------------shift():
+// Cette méthode supprime le premier élément d'un tableau et renvoie cet élément.
+
 //--Exemple:
 const array1 = [1, 2, 3];
 const firstElement = array1.shift();
@@ -29,9 +32,6 @@ console.log(array1); // [2, 3]
 
 
 
-
-//--------------shift():
-// Cette méthode supprime le premier élément d'un tableau et renvoie cet élément.
 
 
 
@@ -242,7 +242,9 @@ let data = [
 ];
 
 document.body.innerHTML = data
-.sort((a, b) => b.age - a.age)
+// .filter((user)=> user.admin === false)
+// .filter((user)=> user.firstname.includes("ro"))
+// .sort((a, b) => b.age - a.age)
 .map(
   (user) => 
     `

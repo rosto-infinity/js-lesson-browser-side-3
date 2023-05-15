@@ -1,0 +1,8 @@
+.container{
+    height: 100vh;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+/* custom input range */

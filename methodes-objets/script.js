@@ -6,8 +6,9 @@
 
 
 const fruits1 = ["banane", "pomme", "poire"];
-const fruitsList = fruits1.join(", ");
-console.log(fruitsList); // affiche "banane, pomme, poire"
+// console.log(fruits1);
+const fruitsList = fruits1.join("-");
+// console.log(fruitsList); // affiche "banane, pomme, poire"
 
 
 //------map():
@@ -17,20 +18,33 @@ console.log(fruitsList); // affiche "banane, pomme, poire"
 //--Exemple:
 
 
-const nombres01 = [1, 2, 3];
-const doubles = nombres01.map(x => x * 2);
-console.log(doubles); // affiche [2, 4, 6]
+const nombres01 = [1, 12, 6, 5 ];
+const doubles = nombres01.map(x => x + 2);
+// console.log(doubles); // affiche [2, 4, 6]
 
 //--------------shift():
 // Cette méthode supprime le premier élément d'un tableau et renvoie cet élément.
 
 //--Exemple:
 const array1 = [1, 2, 3];
+// console.log(array1);
 const firstElement = array1.shift();
-console.log(firstElement); // 1
-console.log(array1); // [2, 3]
+// console.log(firstElement); // 1
+// console.log(array1); // [2, 3]
 
 
+
+//------------pop():-----------------
+// La méthode pop() supprime le dernier élément d'un tableau et renvoie cet élément.
+
+
+//--Exemple:
+
+
+const nombres05 = [1, 2, 3, 4];
+const dernierNombre = nombres05.pop();
+ console.log(dernierNombre); // affiche 4
+ console.log(nombres05);
 
 
 
@@ -80,19 +94,12 @@ console.log(nombres03); // affiche [1, 2, 3, 4]
 
 const nombres04 = [1, 2, 3, 4, 5];
 const somme = nombres04.reduce((total, valeur) => total + valeur);
-console.log(somme); // affiche 15 (1 + 2 + 3 + 4 + 5)
+ console.log(somme); // affiche 15 (1 + 2 + 3 + 4 + 5)
 
 
-//------------pop():-----------------
-// La méthode pop() supprime le dernier élément d'un tableau et renvoie cet élément.
 
 
-//--Exemple:
 
-
-const nombres05 = [1, 2, 3, 4];
-const dernierNombre = nombres05.pop();
-console.log(dernierNombre); // affiche 4
 
 
 //-----------slice():-------------------
@@ -104,7 +111,7 @@ console.log(dernierNombre); // affiche 4
 
 const nombres = [1, 2, 3, 4, 5];
 const sousTableau = nombres.slice(1, 4);
-console.log(sousTableau); // affiche [2, 3, 4]
+// console.log(sousTableau); // affiche [2, 3, 4]
 
 
 //concat():----------------- 
@@ -118,7 +125,7 @@ const nombres1 = [1, 2];
 const nombres2 = [3, 4];
 const nombres3 = [5, 6];
 const tousLesNombres = nombres1.concat(nombres2, nombres3);
-console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
+// console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
 
 
 //---------includes():----------------
@@ -128,7 +135,7 @@ console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
 //----Exemple:
 const array = [1, 2, 3];
 const hasValue = array.includes(2);
-console.log(hasValue); // true
+// console.log(hasValue); // true
 
 
 
@@ -141,10 +148,10 @@ console.log(hasValue); // true
 
 const array2 = [1, 2, 3, 4, 5];
 array2.splice(2, 0, 6, 7);
-console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
+// console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
 
 array2.splice(4, 2);
-console.log(array2); // [1, 2, 6, 7, 5]
+// console.log(array2); // [1, 2, 6, 7, 5]
 
 
 //-------------reverse():--------------- 
@@ -155,7 +162,7 @@ console.log(array2); // [1, 2, 6, 7, 5]
 
 const array3 = [1, 2, 3, 4, 5];
 array3.reverse();
-console.log(array3); // [5, 4, 3, 2, 1]
+// console.log(array3); // [5, 4, 3, 2, 1]
 
 
 
@@ -167,7 +174,7 @@ console.log(array3); // [5, 4, 3, 2, 1]
 
 const array4 = [1, 2, 3];
 const stringArray = array4.toString();
-console.log(stringArray); // output : "1,2,3
+// console.log(stringArray); // output : "1,2,3
 
 //--------------lastIndexOf():---------------
  //Cette méthode renvoie le dernier index d'un élément donné dans un tableau, ou -1 s'il n'est pas présent.
@@ -176,7 +183,7 @@ console.log(stringArray); // output : "1,2,3
 
 const array6 = [1, 2, 3, 2];
 const index = array6.lastIndexOf(2);
-console.log(index); // output : 3
+// console.log(index); // output : 3
 
 
 //-----------every():---------------------
@@ -187,7 +194,7 @@ console.log(index); // output : 3
 
 const array7 = [1, 2, 3, 4, 5];
 const everyElement = array7.every((element) => element > 2);
-console.log(everyElement); // output : false
+// console.log(everyElement); // output : false
 
 
 //------------some():-----------------------
@@ -198,7 +205,7 @@ console.log(everyElement); // output : false
 
 const array8 = [1, 2, 3, 4, 5];
 const someElements = array8.some((element) => element > 2);
-console.log(someElements); // output : true
+// console.log(someElements); // output : true
 
 //------------find():------------------
  //Cette méthode renvoie le premier élément du tableau qui répond à une condition donnée.
@@ -208,7 +215,7 @@ console.log(someElements); // output : true
 
 const array9 = [1, 2, 3, 4, 5];
 const foundElement = array9.find((element) => element > 2);
-console.log(foundElement); // output : 3
+// console.log(foundElement); // output : 3
 
 
 

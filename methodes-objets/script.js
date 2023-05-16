@@ -111,7 +111,7 @@ const somme = nombres04.reduce((total, valeur) => total + valeur);
 
 const nombres = [1, 2, 3, 4, 5];
 const sousTableau = nombres.slice(1, 4);
-// console.log(sousTableau); // affiche [2, 3, 4]
+ console.log(sousTableau); // affiche [2, 3, 4]
 
 
 //concat():----------------- 
@@ -125,7 +125,7 @@ const nombres1 = [1, 2];
 const nombres2 = [3, 4];
 const nombres3 = [5, 6];
 const tousLesNombres = nombres1.concat(nombres2, nombres3);
-// console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
+ console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
 
 
 //---------includes():----------------
@@ -135,7 +135,7 @@ const tousLesNombres = nombres1.concat(nombres2, nombres3);
 //----Exemple:
 const array = [1, 2, 3];
 const hasValue = array.includes(2);
-// console.log(hasValue); // true
+ console.log(hasValue); // true
 
 
 
@@ -147,11 +147,11 @@ const hasValue = array.includes(2);
 //--Exemple:
 
 const array2 = [1, 2, 3, 4, 5];
-array2.splice(2, 0, 6, 7);
-// console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
+array2.splice(2, 3, 6, 7);
+ console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
 
 array2.splice(4, 2);
-// console.log(array2); // [1, 2, 6, 7, 5]
+ console.log(array2); // [1, 2, 6, 7, 5]
 
 
 //-------------reverse():--------------- 
@@ -162,7 +162,7 @@ array2.splice(4, 2);
 
 const array3 = [1, 2, 3, 4, 5];
 array3.reverse();
-// console.log(array3); // [5, 4, 3, 2, 1]
+ console.log(array3); // [5, 4, 3, 2, 1]
 
 
 
@@ -174,7 +174,7 @@ array3.reverse();
 
 const array4 = [1, 2, 3];
 const stringArray = array4.toString();
-// console.log(stringArray); // output : "1,2,3
+ console.log(stringArray); // output : "1,2,3"
 
 //--------------lastIndexOf():---------------
  //Cette méthode renvoie le dernier index d'un élément donné dans un tableau, ou -1 s'il n'est pas présent.
@@ -194,7 +194,7 @@ const index = array6.lastIndexOf(2);
 
 const array7 = [1, 2, 3, 4, 5];
 const everyElement = array7.every((element) => element > 2);
-// console.log(everyElement); // output : false
+console.log(everyElement); // output : false
 
 
 //------------some():-----------------------
@@ -249,9 +249,9 @@ let data = [
 ];
 
 document.body.innerHTML = data
-// .filter((user)=> user.admin === false)
-// .filter((user)=> user.firstname.includes("ro"))
-// .sort((a, b) => b.age - a.age)
+  .filter((user)=> user.admin === false)
+ .filter((user)=> user.firstname.includes("my"))
+ .sort((a, b) => a.age - b.age)
 .map(
   (user) => 
     `
@@ -261,5 +261,4 @@ document.body.innerHTML = data
         <p>Status : ${user.admin ? "Modérateur" : "Membre"} </p>
     </div>
     `
-)
- .join("");
+).join("**************************")

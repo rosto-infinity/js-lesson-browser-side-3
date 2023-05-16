@@ -29,7 +29,7 @@ function generatePassword() {
     }
     passwordOutput.value = password;
     passwordOutput.select();
-    // document.execCommand("copy");
+    document.execCommand("copy");
     // navigator.clipboard.read("Copié !");
     generateButton.textContent = "Copié !";
 

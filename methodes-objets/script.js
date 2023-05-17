@@ -43,7 +43,7 @@ const firstElement = array1.shift();
 
 const nombres05 = [1, 2, 3, 4];
 const dernierNombre = nombres05.pop();
- console.log(dernierNombre); // affiche 4
+//  console.log(dernierNombre); // affiche 4
  console.log(nombres05);
 
 
@@ -58,7 +58,7 @@ const dernierNombre = nombres05.pop();
 
 const nombres02 = [1, 2, 3, 4, 5];
 const nombresPairs = nombres02.filter(x => x % 2 === 0);
-console.log(nombresPairs); // affiche [2, 4]
+// console.log(nombresPairs); // affiche [2, 4]
 
 
 //---------sort():------------
@@ -70,7 +70,7 @@ console.log(nombresPairs); // affiche [2, 4]
 
 const fruits = ["banane", "pomme", "poire"];
 fruits.sort();
-console.log(fruits); // affiche ["banane", "poire", "pomme"]
+// console.log(fruits); // affiche ["banane", "poire", "pomme"]
 
 
 //------------push():-------------------
@@ -82,7 +82,7 @@ console.log(fruits); // affiche ["banane", "poire", "pomme"]
 
 const nombres03 = [1, 2, 3];
 nombres03.push(4);
-console.log(nombres03); // affiche [1, 2, 3, 4]
+// console.log(nombres03); // affiche [1, 2, 3, 4]
 
 
 //----------reduce():----------------
@@ -94,7 +94,7 @@ console.log(nombres03); // affiche [1, 2, 3, 4]
 
 const nombres04 = [1, 2, 3, 4, 5];
 const somme = nombres04.reduce((total, valeur) => total + valeur);
- console.log(somme); // affiche 15 (1 + 2 + 3 + 4 + 5)
+//  console.log(somme); // affiche 15 (1 + 2 + 3 + 4 + 5)
 
 
 
@@ -111,7 +111,7 @@ const somme = nombres04.reduce((total, valeur) => total + valeur);
 
 const nombres = [1, 2, 3, 4, 5];
 const sousTableau = nombres.slice(1, 4);
- console.log(sousTableau); // affiche [2, 3, 4]
+//  console.log(sousTableau); // affiche [2, 3, 4]
 
 
 //concat():----------------- 
@@ -125,7 +125,7 @@ const nombres1 = [1, 2];
 const nombres2 = [3, 4];
 const nombres3 = [5, 6];
 const tousLesNombres = nombres1.concat(nombres2, nombres3);
- console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
+//  console.log(tousLesNombres); // affiche [1, 2, 3, 4, 5, 6]
 
 
 //---------includes():----------------
@@ -135,7 +135,7 @@ const tousLesNombres = nombres1.concat(nombres2, nombres3);
 //----Exemple:
 const array = [1, 2, 3];
 const hasValue = array.includes(2);
- console.log(hasValue); // true
+//  console.log(hasValue); // true
 
 
 
@@ -148,10 +148,10 @@ const hasValue = array.includes(2);
 
 const array2 = [1, 2, 3, 4, 5];
 array2.splice(2, 3, 6, 7);
- console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
+//  console.log(array2); // [1, 2, 6, 7, 3, 4, 5]
 
 array2.splice(4, 2);
- console.log(array2); // [1, 2, 6, 7, 5]
+//  console.log(array2); // [1, 2, 6, 7, 5]
 
 
 //-------------reverse():--------------- 
@@ -162,7 +162,7 @@ array2.splice(4, 2);
 
 const array3 = [1, 2, 3, 4, 5];
 array3.reverse();
- console.log(array3); // [5, 4, 3, 2, 1]
+//  console.log(array3); // [5, 4, 3, 2, 1]
 
 
 
@@ -174,7 +174,7 @@ array3.reverse();
 
 const array4 = [1, 2, 3];
 const stringArray = array4.toString();
- console.log(stringArray); // output : "1,2,3"
+//  console.log(stringArray); // output : "1,2,3"
 
 //--------------lastIndexOf():---------------
  //Cette méthode renvoie le dernier index d'un élément donné dans un tableau, ou -1 s'il n'est pas présent.
@@ -194,7 +194,7 @@ const index = array6.lastIndexOf(2);
 
 const array7 = [1, 2, 3, 4, 5];
 const everyElement = array7.every((element) => element > 2);
-console.log(everyElement); // output : false
+// console.log(everyElement); // output : false
 
 
 //------------some():-----------------------
@@ -249,9 +249,9 @@ let data = [
 ];
 
 document.body.innerHTML = data
-  .filter((user)=> user.admin === false)
- .filter((user)=> user.firstname.includes("my"))
- .sort((a, b) => a.age - b.age)
+  //.filter((user)=> user.admin === false)
+ //.filter((user)=> user.firstname.includes("my"))
+ //.sort((a, b) => a.age - b.age)
 .map(
   (user) => 
     `
@@ -262,3 +262,177 @@ document.body.innerHTML = data
     </div>
     `
 ).join("**************************")
+
+
+
+
+  // Methodes String
+  let string2 ="Javascript est un langage orienté objet";
+
+  // console.log(string2);
+  // console.log(typeof string2);
+  //console.log(eval("1" + 2));
+  // console.log(parseInt("17"));
+  // console.log(typeof parseInt("17"));
+  // console.log();
+
+
+
+  //----------------------
+  //Date classique
+  //----------------------
+
+// Date(): Cette fonction renvoie la date et l'heure actuelles.
+
+const date1 = new Date();
+console.log(date1); // Affiche la date et l'heure actuelles
+
+
+//getFullYear(): Cette méthode renvoie l'année de la date spécifiée.
+
+
+//Exemple :
+
+
+
+let date2 = new Date();
+const year = date2.getFullYear();
+console.log(year); // Affiche l'année en cours
+
+//getDate(): Cette méthode renvoie le jour (1-31) de la date spécifiée.
+
+//Exemple :
+
+const date45 = new Date();
+const day = date45.getDate();
+console.log(day); // Affiche le jour en cours (par exemple, 27 pour le 27 septembre)
+
+//getDay(): Cette méthode renvoie le jour de la semaine (0-6) de la date spécifiée.
+
+
+//Exemple :
+
+const date5 = new Date();
+const dayOfWeek = date5.getDay();
+console.log(dayOfWeek); // Affiche le jour de la semaine en cours (par exemple, 1 pour lundi)
+//getHours(): Cette méthode renvoie l'heure (0-23) de la date spécifiée.
+
+
+//Exemple :
+
+const date67 = new Date();
+const hour = date67.getHours();
+console.log(hour);  //Affiche l'heure en cours (par exemple, 14 pour 14h)
+
+//getMinutes(): Cette méthode renvoie les minutes (0-59) de la date spécifiée.
+
+
+//Exemple :
+
+const date7 = new Date();
+const minutes = date7.getMinutes();
+console.log(minutes); // Affiche les minutes en cours (par exemple, 37)
+
+
+//getSeconds(): Cette méthode renvoie les secondes (0-59) de la date spécifiée.
+
+
+//Exemple :
+
+const date8 = new Date();
+const seconds = date8.getSeconds();
+console.log(seconds); // Affiche les secondes en cours (par exemple, 16)
+
+//toISOString(): Cette méthode renvoie une chaîne de caractères représentant la date dans le format ISO.
+
+
+//Exemple :
+
+const date9 = new Date();
+const isoDate = date9.toISOString();
+ console.log(isoDate); // Affiche la date au format ISO (par exemple, 2021-09-27T14:37:16.123Z)
+ console.log(date9.toString()); // Affiche la date au format ISO (par exemple, 2021-09-27T14:37:16.123Z)
+
+
+//toLocaleDateString(): Cette méthode renvoie une chaîne de caractères représentant la date dans un format localisé.
+
+
+//Exemple :
+
+const date10 = new Date();
+const localDate = date10.toLocaleDateString();
+console.log(localDate); // Affiche la date dans un format localisé (par exemple, 27/09/2021)
+
+
+
+//timetamp
+
+const date = new Date();
+let timetamp = Date.parse(date);
+console.log(timetamp);// Le nombre de ms depuis 1970
+
+function dateParser (chaine){
+  let newDate = new Date(chaine)
+  .toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric", 
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+  
+  });
+  return newDate;
+}
+ console.log(dateParser(date));
+ console.log(dateParser(timetamp));
+ console.log(dateParser(isoDate)); 
+
+//----------------------------------
+// Destructuring
+//----------------------------------
+
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"]
+}
+const { destVar } = moreData; //=== const destVar = moreData.destVar;
+
+//console.log(moreData.destVar[0]);
+
+// console.log(destVar);
+
+let array10 =["90", "190", "9", "40"];
+// console.log(array10[0]);
+// console.log(array10[1]);
+// console.log(array10[2]);
+// console.log(array10[3]);
+
+let [x, y, z, t] = array10;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+// console.log(t);
+
+//palindrome : Mot ou groupe de mots qui peut se lire indifféremment de gauche à droite ou de droite à gauche en gardant le même sens
+
+// let mot = prompt("Entrez un mot : ");
+let mot = "anana";
+let reverse = mot.split("").reverse().join("");
+if (mot === reverse) {
+ // console.log("Le mot est un palindrome.");
+} else {
+ // console.log("Le mot n'est pas un palindrome.");
+
+}
+const dateDestructuring = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  let [y, m, d] = newDate.split("-")
+  return [d, m, y].join("/");
+};
+// console.log(dateDestructuring(isoDate));
+
+
+//-----------------------------------
+// Les datasets
+//-----------------------------------

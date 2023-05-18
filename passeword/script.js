@@ -53,3 +53,42 @@ function generateurPassword(){
 generateButton.addEventListener("click", generateurPassword);
 
 
+// Here's a basic JavaScript script for a password generator:
+
+// javascript
+//  define arrays of possible characters for each category
+const lowercaseChars = "abcdefghijklmnopqrstuvwxyz".split("");
+const uppercaseChars = lowercaseChars.map(char => char.toUpperCase());
+const numericChars = "0123456789".split("");
+const specialChars = "!@#$%^&*()_+-=[]{};':\"\\|,.<>/?".split("");
+
+// define function to generate random integer within a given range
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// define function to generate random password
+function generatePassword(length = 8) {
+  let password = "";
+  
+  // add random characters from each category until desired length is reached
+  while (password.length < length) {
+    password += lowercaseChars[getRandomInt(0, lowercaseChars.length - 1)];
+    password += uppercaseChars[getRandomInt(0, uppercaseChars.length - 1)];
+    password += numericChars[getRandomInt(0, numericChars.length - 1)];
+    password += specialChars[getRandomInt(0, specialChars.length - 1)];
+  }
+  
+  // remove excess characters to match desired length
+  password = password.slice(0, length);
+  
+  return password;
+}
+
+// example usage
+console.log(generatePassword()); // generates a random 8-character password
+console.log(generatePassword(12)); // generates 
+
+//This script defines four arrays containing possible characters for lowercase letters, uppercase letters, numeric digits, and special characters. It also defines two functions: `getRandomInt` to generate a random integer within a given range, and `generatePassword` to create a password of a specified length by adding random characters from each category and then trimming the excess characters. 
+
+// The script includes examples of how to use the `generatePassword` function, which will print out a random password to the console. Of course, other implementations of a password generator could be much more complex and might include features such as user input validation, character set customization, and more.

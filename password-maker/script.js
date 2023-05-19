@@ -29,24 +29,16 @@ function generatePassword() {
     }
     passwordOutput.value = password;
     passwordOutput.select();
-    // document.execCommand("copy");
-    // navigator.clipboard.read("Copié !");
-    // generateButton.textContent = "Copié !";
     navigator.clipboard.writeText(password)
     .then(() => {
       generateButton.textContent = "Copié !";
       setTimeout(() => {
         generateButton.textContent = "Générer un mot de passe";
-      }, 2000);
+      }, 4000);
     })
-    .catch((err) => {
-      console.error('Une erreur est survenue lors de la copie du mot de passe', err);
-    });
-
-    // setTimeout(() => {
-    //     generateButton.textContent = "Générer  de mot de passe";
-        
-    // }, 2080);
+    // .catch((err) => {
+    //   console.error('Une erreur est survenue lors de la copie du mot de passe', err);
+    // });
 }
 
 generateButton.addEventListener('click', generatePassword);

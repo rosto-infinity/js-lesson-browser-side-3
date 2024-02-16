@@ -20,14 +20,10 @@ body {
     width: 5px;
     background-color: black;
     top: 0;
-    transform: translateY(-4px);
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
+    transform: translateY(-4px); 
     right: -5px;
     animation: animate 0.8s linear infinite;
-    -webkit-animation: animate 0.8s linear infinite;
+   
 }
 
 @keyframes animate {

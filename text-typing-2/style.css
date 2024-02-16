@@ -1,0 +1,51 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size:3rem;
+}
+#target{
+  display: flex;
+  margin-left: 1rem;
+  position: relative;   
+}
+#target::after{
+  content: "";
+  position: absolute;
+  height: 3.5rem;
+  width: 5px;
+  background-color: blue;
+  top: 0;
+  right: -5px;
+  transform: translateY(-4px);
+  animation: animate 0.8s linear infinite;
+}
+@keyframes animate{
+  50%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+.vert {
+  color: green;
+}
+
+.rouge {
+  color: red;
+}
+
+.jaune {
+  color: yellow;
+  background-color: #000;
+}
+
+
+
+
+

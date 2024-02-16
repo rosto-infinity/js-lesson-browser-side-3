@@ -107,6 +107,71 @@ document.body.addEventListener(
 
   
 //-----------------------------------
+// Les destructuring
+//-----------------------------------
+
+// Le destructuring est une technique de programmation disponible depuis ES6 (ECMAScript 2015) en JavaScript, permettant d'extraire des valeurs d'un objet ou d'un tableau de manière plus concise.
+
+
+// Voici un exemple d'utilisation du destructuring avec un objet:
+
+
+
+const user1 = {
+  name1: "Rosto",
+  age1: 30,
+  email1: "contact@rostodev.com"
+}
+
+const {name1, age1} = user1;
+
+console.log(name1); // "Rosto"
+console.log(age1); // 30
+
+// Dans cet exemple, on extrait les propriétés name1 et age1 de l'objet user1 en les assignant respectivement aux variables name1 et age1. Cela permet d'accéder plus facilement aux propriétés d'un objet sans avoir à utiliser le point notation.
+
+
+// Voici un exemple d'utilisation du destructuring avec un tableau:
+
+
+
+const fruits = ["Apple", "Banana", "Cherry"];
+
+const [first, second, third] = fruits;
+
+console.log(first); // "Apple"
+console.log(second); // "Banana"
+console.log(third); // "Cherry"
+
+// Ici, on extrait les éléments du tableau fruits en les assignant respectivement aux variables first, second, et third. Là encore, cela permet d'accéder plus facilement aux éléments d'un tableau sans avoir à utiliser les indices.
+
+
+// Le destructuring peut également être utilisé pour extraire des propriétés imbriquées dans des objets, pour ignorer des propriétés, ou pour définir des valeurs par défaut.
+
+
+ 
+const user2 = {
+  name2: "Lele",
+  age2: 31,
+  contact: {
+    email2: "contact@rostodev.com",
+    phone2: "655-555-555"
+  }
+}
+
+const {name2, age2, contact: {email2}} = user2;
+
+console.log(name2); // "Lele"
+console.log(age2); // 31
+console.log(email2); // "contact@rostodev.com"
+
+// Dans cet exemple, on extrait la propriété email2 imbriquée dans la propriété contact de l'objet user2 en l'assignant à la variable email2.
+
+
+// Le destructuring est un outil puissant de JavaScript qui permet de simplifier la manipulation d'objets et de tableaux. Il est souvent utilisé en conjonction avec les fonctions fléchées pour écrire un code plus concis et lisible.
+
+
+//-----------------------------------
 // Les datasets
 //-----------------------------------
 
@@ -115,7 +180,11 @@ document.body.addEventListener(
 // Par exemple, si vous avez un formulaire HTML pour créer un compte utilisateur, vous pouvez ajouter des datasets personnalisées pour stocker le nom d'utilisateur, l'adresse e-mail, etc.
 
 // Accéder aux datasets personnalisées
-const monElement = document.querySelector('#monElement');
+const monElement = document.getElementById('monElement');
+console.log(monElement);
+console.log(monElement.dataset);
+
+
 
 const nameN = monElement.dataset.name;
 const age = monElement.dataset.age;
@@ -125,7 +194,7 @@ console.log(age); // "30"
 
 // Définir des datasets personnalisées
 monElement.dataset.hobbies = 'Soccer, Reading';
-console.log(monElement.dataset.hobbies); // "Soccer, Reading"
+ console.log(monElement.dataset.hobbies); // "Soccer, Reading"
 
 // Dans cet exemple, nous avons défini deux datasets personnalisées data-name et data-age sur un élément div. Nous avons également accédé aux valeurs de ces datasets à l'aide de la propriété dataset de l'élément HTML. Ensuite, nous avons ajouté un nouveau dataset personnalisé data-hobbies à l'élément et nous avons accédé à sa valeur pour vérifier si elle a été correctement ajoutée.
 
